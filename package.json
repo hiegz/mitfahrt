@@ -1,6 +1,12 @@
 {
     "name": "mitfahrt",
     "version": "0.0.0",
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "eslint"
+    },
     "dependencies": {
         "@tailwindcss/postcss": "^4.1.18",
         "@types/next": "^8.0.7",
