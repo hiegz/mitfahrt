@@ -4,14 +4,12 @@ import i18nConfig from "@/i18n.config";
 
 export default async function proxy(request: NextRequest) {
     const systemLocale = resolveSystemLocale(request.headers);
-    const userLocale =
-        resolveUserLocale(request.cookies) ??
-        systemLocale ??
-        i18nConfig.default;
+    const userLocale = resolveUserLocale(request.cookies);
+    const appLocale = userLocale ?? systemLocale ?? i18nConfig.default;
 
     return NextResponse.next({
         headers: {
-            [i18nConfig.appLocaleHeader]: userLocale,
+            [i18nConfig.appLocaleHeader]: appLocale,
 
             /** this only includes system locale header if systemLocale is not undefined */
             ...(systemLocale !== undefined && {
