@@ -1,0 +1,99 @@
+.tab-view {
+    min-width: 280px;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+/**
+ * Tab Selection
+ */
+
+.tab-selection {
+    margin-left: -1px;
+}
+
+.tab-selection > button {
+    width: fit-content;
+    padding: 5px 15px;
+
+    cursor: pointer;
+
+    outline: 1px solid #eee;
+    background: #eee;
+    margin-left: 1px;
+}
+
+.tab-selection > button:hover {
+    background: #f4f4f4;
+}
+
+.tab-selection > button[data-state="selected"] {
+    background: #fff !important;
+}
+
+/**
+ * Tab
+ */
+
+.tab {
+    outline: 1px solid #eee;
+    margin-top: 1px;
+
+    padding: 15px;
+}
+
+/**
+ * Input
+ */
+
+.tab input[type="text"],
+.tab input[type="password"] {
+    display: table-cell;
+    width: 100%;
+
+    outline: 2px solid #eee;
+    padding: 4px 8px;
+}
+
+.tab input[type="text"].highlighted,
+.tab input[type="password"].highlighted {
+    outline: 2px solid #a50034;
+}
+
+.tab input[type="checkbox"] {
+    accent-color: 2px solid #000;
+}
+
+.tab .checkbox {
+    outline: 2px solid #eee;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.tab .checkbox[data-state="checked"] {
+    background: #8fd6bd;
+    outline: 2px solid #8fd6bd;
+}
+
+.tab .check-icon {
+    color: white;
+}
+
+.tab .button {
+    width: fit-content;
+    padding: 4px 16px;
+    background: #be531c;
+    color: white;
+    cursor: pointer;
+}
+
+.tab .button[disabled] {
+    background: #d8a78f;
+}
+
+.tab .error-message {
+    color: #a50034;
+}
