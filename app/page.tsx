@@ -1,4 +1,4 @@
-import Header from "./header";
+import Header from "./components/header";
 import AddButton from "./components/add-button";
 
 export default function Page() {
