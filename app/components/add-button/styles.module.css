@@ -1,0 +1,21 @@
+.add-button {
+    position: fixed;
+    margin: 12px auto;
+    z-index: 1;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    width: fit-content;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+
+    cursor: pointer;
+
+    background: #be531c;
+    color: white;
+}
