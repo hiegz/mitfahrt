@@ -4,8 +4,6 @@ import { ReactNode } from "react";
 import { getAppLocale, getSystemLocale, getTranslations } from "@/i18n/server";
 import { TranslationProvider } from "@/i18n/client";
 
-import Header from "./header";
-
 type Props = {
     children: ReactNode;
 };
@@ -30,10 +28,7 @@ export default async function Layout({ children }: Props) {
     return (
         <html>
             <body>
-                <Providers>
-                    <Header />
-                    <main>{children}</main>
-                </Providers>
+                <Providers>{children}</Providers>
             </body>
         </html>
     );
