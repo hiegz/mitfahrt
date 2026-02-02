@@ -1,6 +1,7 @@
 "use client";
 
 import { SyntheticEvent, useRef, useState } from "react";
+import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import Checkbox, { CheckboxHandle } from "@/ui/checkbox";
 import CheckIcon from "@/icons/check-icon";
@@ -18,6 +19,8 @@ const SignIn = () => {
     const usernameRef   = useRef<HTMLInputElement>(null);
     const passwordRef   = useRef<HTMLInputElement>(null);
     const rememberMeRef = useRef<CheckboxHandle>(null);
+
+    const router = useRouter();
 
     const onSubmit = async (e: SyntheticEvent<HTMLButtonElement>) => {
         e.preventDefault();
@@ -43,6 +46,9 @@ const SignIn = () => {
         }
 
         setDisabled(false);
+
+        router.replace("/");
+        router.refresh();
     };
 
     const onFocus = () => {

@@ -1,0 +1,26 @@
+.header {
+    max-width: 700px;
+    margin: 0px auto;
+    padding: 8 16px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header > h1 {
+    font-weight: 700;
+    font-size: 24px;
+}
+
+.header > .logout-button {
+    width: fit-content;
+    padding: 4px 16px;
+    background: #be531c;
+    color: white;
+    cursor: pointer;
+}
+
+.header > .logout-button[disabled] {
+    background: #d8a78f;
+}

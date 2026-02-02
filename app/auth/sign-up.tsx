@@ -8,6 +8,7 @@ import {
     useState,
 } from "react";
 
+import { useRouter } from "next/navigation";
 import { authClient } from "@/lib/auth-client";
 import styles from "./styles.module.css";
 
@@ -29,6 +30,8 @@ const SignUp = () => {
     const usernameRef = useRef<HTMLInputElement>(null);
     const passwordRef = useRef<HTMLInputElement>(null);
     const repeatedPasswordRef = useRef<HTMLInputElement>(null);
+
+    const router = useRouter();
 
     // highlights the provided input element
     const highlight = (e: HTMLInputElement) => {
@@ -92,6 +95,9 @@ const SignUp = () => {
 
         setStage("verification");
         setDisabled(false);
+
+        router.replace("/");
+        router.refresh();
     };
 
     const onFocus = (e: FocusEvent<HTMLInputElement>) => {
