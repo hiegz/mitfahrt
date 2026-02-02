@@ -2,6 +2,7 @@ import { headers } from "next/headers";
 import { auth } from "@/lib/auth";
 import styles from "./styles.module.css";
 import LogOutButton from "@/components/logout-button";
+import LogOutIcon from "@/icons/logout-icon";
 
 const Header = async () => {
     const { session } = (await auth.api.getSession({
@@ -16,7 +17,7 @@ const Header = async () => {
                     token={session.token}
                     className={styles["logout-button"]}
                 >
-                    Log Out
+                    <LogOutIcon width={24} strokeWidth={1.5} /> Log Out
                 </LogOutButton>
             </header>
         )

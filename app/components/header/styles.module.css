@@ -15,9 +15,15 @@
 
 .header > .logout-button {
     width: fit-content;
-    padding: 4px 16px;
+    padding: 8px 16px;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
     background: #be531c;
     color: white;
+
     cursor: pointer;
 }
 
