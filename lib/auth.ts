@@ -14,9 +14,7 @@ export const auth = betterAuth({
     emailVerification: {
         autoSignInAfterVerification: true,
         sendVerificationEmail: async ({ user, url }, _) => {
-            console.log("sending email ... ");
-
-            const info = await transporter.sendMail({
+            await transporter.sendMail({
                 from: "noreply <noreply@hiegz.com>",
                 to: user.email,
                 subject: "Verify your Email",
@@ -32,8 +30,6 @@ export const auth = betterAuth({
                 Cheers,
                 Mitfahrt's friendly bot`,
             });
-
-            console.log(info);
         },
     },
 });
